@@ -291,3 +291,6 @@ body { background: var(--bg); }
   .subtabs { margin-top: 4px; }
   .grid { grid-template-columns: 1fr; }
 }
+
+/* tabs share the full bar width evenly */
+.subtabs a { flex: 1 0 auto; justify-content: center; }
