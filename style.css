@@ -133,8 +133,8 @@ footer { padding: 36px 0 56px; border-top: 1px solid var(--line); color: var(--m
 }
 
 .sponsors { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 12px; font-size: 0.78rem; color: var(--muted); }
-.sponsors .logo { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 5px 10px; display: inline-flex; align-items: center; }
-.sponsors .logo img { height: 18px; width: auto; display: block; }
+.sponsors .logo { background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 4px 8px; display: inline-flex; align-items: center; justify-content: center; }
+.sponsors .logo img { width: 68px; height: 14px; object-fit: contain; display: block; }
 
 .conf { margin: 0 0 10px; padding: 6px 10px; border-radius: 8px; font-size: 0.82rem; background: var(--accent-soft); color: var(--text); border-left: 3px solid var(--accent); flex: none !important; }
 .job .conf { margin-top: 12px; }
