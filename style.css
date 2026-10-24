@@ -235,7 +235,7 @@ main > section:first-of-type { border-top: none; }
 .tabbar.home .tab:hover { background: var(--bg); color: var(--accent); }
 
 /* skills accordion cards */
-.skill-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; align-items: start; }
+.skill-grid { display: grid; grid-template-columns: 1fr; gap: 16px; align-items: start; }
 .skill { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
 .skill summary { list-style: none; display: flex; align-items: center; gap: 16px; padding: 22px; cursor: pointer; }
 .skill summary::-webkit-details-marker { display: none; }
