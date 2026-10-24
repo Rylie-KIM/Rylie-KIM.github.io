@@ -40,7 +40,7 @@
         <a class="btn primary" href="#projects">View projects</a>
         <a class="btn" href="https://github.com/Rylie-KIM">GitHub</a>
         <a class="btn" href="http://www.linkedin.com/in/seo-yeon-kim-syk">LinkedIn</a>
-        <a class="btn" href="#contact">Email</a>
+        <button class="btn copy-email" type="button" data-email="yeonkim112599@gmail.com" data-label="Email">Email</button>
       </div>
     </div>
   </div>
@@ -353,9 +353,7 @@
   <h2>Contact</h2>
   <p>Open to Data Scientist and ML roles in the UK. The best way to reach me is email: <strong>yeonkim112599@gmail.com</strong></p>
   <div class="btns">
-    <a class="btn primary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=yeonkim112599@gmail.com" target="_blank" rel="noopener">Write in Gmail</a>
-    <button class="btn" type="button" id="copy-email" data-email="yeonkim112599@gmail.com">Copy address</button>
-    <a class="btn" href="mailto:yeonkim112599@gmail.com">Default mail app</a>
+    <button class="btn primary copy-email" type="button" data-email="yeonkim112599@gmail.com" data-label="Copy email address">Copy email address</button>
     <a class="btn" href="http://www.linkedin.com/in/seo-yeon-kim-syk">LinkedIn</a>
     <a class="btn" href="https://github.com/Rylie-KIM">GitHub</a>
   </div>
@@ -369,14 +367,15 @@
 
 <script>
 (function () {
-  var b = document.getElementById('copy-email');
-  if (!b) return;
-  b.addEventListener('click', function () {
-    var t = b.getAttribute('data-email');
-    function done() { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy address'; }, 1800); }
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(t).then(done, function () { window.prompt('Copy this address:', t); });
-    } else { window.prompt('Copy this address:', t); }
+  document.querySelectorAll('.copy-email').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var t = b.getAttribute('data-email');
+      var label = b.getAttribute('data-label');
+      function done() { b.textContent = 'Copied: ' + t; setTimeout(function () { b.textContent = label; }, 2200); }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(t).then(done, function () { window.prompt('Copy this address:', t); });
+      } else { window.prompt('Copy this address:', t); }
+    });
   });
 })();
 document.querySelectorAll('.carousel').forEach(function (c) {
