@@ -316,4 +316,4 @@ body { background: var(--bg); }
 
 .job-head .when { text-align: right; }
 .job-head .when .loc { display: block; margin-top: 2px; font-size: 0.85rem; }
-@media (min-width: 701px) { .job-head { margin-bottom: -22px; } .job .sub { position: relative; max-width: 70%; } }
+@media (min-width: 701px) { .job-head:has(.loc) { margin-bottom: -22px; } .job-head:has(.loc) + .sub { position: relative; max-width: 70%; } }
