@@ -309,3 +309,7 @@ body { background: var(--bg); }
 .card p.conf { margin-top: 0; }
 .card div:has(+ p.conf) { margin-bottom: 12px; }
 .card p.conf + .links { padding-top: 6px; }
+
+.sponsors .logo-text { gap: 6px; }
+.sponsors .logo-text img { width: 14px; height: 14px; border-radius: 3px; }
+.sponsors .logo-text b { font-size: 0.74rem; line-height: 14px; color: #1c1f26; font-weight: 600; white-space: nowrap; }
