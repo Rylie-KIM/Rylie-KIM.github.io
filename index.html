@@ -187,7 +187,7 @@
     </article>
 
     <article class="card">
-      <a href="https://lnkd.in/p/eapujvNC"><img class="thumb" src="assets/projects/lloyds.jpg" alt="Team slide: Credit Card Fraud Detection" loading="lazy"></a>
+      <div class="carousel"><div class="track"><a href="https://lnkd.in/p/eapujvNC"><img class="thumb" src="assets/projects/lloyds_team.jpg" alt="Lloyds x UoB Datathon team" loading="lazy"></a><a href="https://lnkd.in/p/eapujvNC"><img class="thumb" src="assets/projects/lloyds.jpg" alt="Team slide: Credit Card Fraud Detection" loading="lazy"></a></div></div>
       <h3>Fraud Detection: Performance vs Carbon</h3>
       <div class="meta">Lloyds × UoB Datathon 2026</div>
       <p>Benchmarked 11 ML models for fraud detection and designed a leaderboard that weighs predictive performance against carbon cost.</p>
@@ -196,7 +196,7 @@
     </article>
 
     <article class="card">
-      <img class="thumb" src="assets/projects/grapple.jpg" alt="180 Degrees Consulting Grapple Law team" loading="lazy">
+      <div class="carousel"><div class="track"><img class="thumb" src="assets/projects/grapple.jpg" alt="180 Degrees Consulting Grapple Law team" loading="lazy"><img class="thumb" src="assets/projects/grapple_profile.jpg" alt="Grapple Law project team profile" loading="lazy"></div></div>
       <h3>Grapple Retention Pipeline &amp; Dashboard</h3>
       <div class="meta">180 Degrees Consulting · 2026</div>
       <p>n8n workflows with LLM prompt engineering to nudge legal-platform users toward a subscription, plus a Sankey engagement dashboard across an 11-level case hierarchy.</p>
@@ -232,7 +232,7 @@
     </article>
 
     <article class="card">
-      <a href="https://www.linkedin.com/posts/seo-yeon-kim-syk_headstart-launchpad2026-healthtech-ugcPost-7443459306458427392-GZk8"><img class="thumb" src="assets/projects/lumenia.jpg" alt="Lumenia logo" loading="lazy"></a>
+      <div class="carousel"><div class="track"><a href="https://www.linkedin.com/posts/seo-yeon-kim-syk_headstart-launchpad2026-healthtech-ugcPost-7443459306458427392-GZk8"><img class="thumb" src="assets/projects/lumenia.jpg" alt="Lumenia logo" loading="lazy"></a><a href="https://www.linkedin.com/posts/seo-yeon-kim-syk_headstart-launchpad2026-healthtech-ugcPost-7443459306458427392-GZk8"><img class="thumb" src="assets/projects/lumenia_cert.jpg" alt="Headstart Launchpad certificate of completion" loading="lazy"></a></div></div>
       <h3>Lumenia</h3>
       <div class="meta">Headstart Global Launchpad EMEA 2026</div>
       <p>Led the team in the Healthcare Tech case competition, delivering a fully evidenced B2B mental health platform pitch within six days.</p>
@@ -288,5 +288,38 @@
   <div class="wrap">© 2026 SeoYeon Kim · London, UK</div>
 </footer>
 
+<script>
+document.querySelectorAll('.carousel').forEach(function (c) {
+  var track = c.querySelector('.track');
+  var n = track.children.length;
+  if (n < 2) return;
+  var dots = document.createElement('div');
+  dots.className = 'dots';
+  var ds = [];
+  for (var i = 0; i < n; i++) {
+    var d = document.createElement('button');
+    d.type = 'button';
+    d.setAttribute('aria-label', 'Photo ' + (i + 1));
+    (function (i) { d.onclick = function () { track.scrollTo({ left: i * track.clientWidth, behavior: 'smooth' }); }; })(i);
+    dots.appendChild(d); ds.push(d);
+  }
+  function mk(cls, label, dir) {
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'nav ' + cls; b.textContent = label;
+    b.setAttribute('aria-label', dir > 0 ? 'Next photo' : 'Previous photo');
+    b.onclick = function () { track.scrollBy({ left: dir * track.clientWidth, behavior: 'smooth' }); };
+    return b;
+  }
+  c.appendChild(mk('prev', '\u2039', -1));
+  c.appendChild(mk('next', '\u203a', 1));
+  c.appendChild(dots);
+  function sync() {
+    var i = Math.round(track.scrollLeft / track.clientWidth);
+    ds.forEach(function (d, k) { d.classList.toggle('on', k === i); });
+  }
+  track.addEventListener('scroll', sync, { passive: true });
+  sync();
+});
+</script>
 </body>
 </html>

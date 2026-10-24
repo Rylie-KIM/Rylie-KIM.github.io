@@ -93,6 +93,20 @@ h3 { margin: 0; font-size: 1.05rem; }
   padding: 20px; display: flex; flex-direction: column;
 }
 .card .thumb { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 10px; margin-bottom: 14px; display: block; }
+.carousel { position: relative; margin-bottom: 14px; }
+.carousel .track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; border-radius: 10px; }
+.carousel .track::-webkit-scrollbar { display: none; }
+.carousel .track > * { flex: 0 0 100%; scroll-snap-align: center; display: block; }
+.carousel .thumb { margin-bottom: 0; }
+.carousel .nav {
+  position: absolute; top: 50%; transform: translateY(-50%); width: 30px; height: 30px; border-radius: 50%;
+  border: none; background: rgba(0, 0, 0, 0.5); color: #fff; font-size: 1.2rem; line-height: 1; cursor: pointer;
+}
+.carousel .prev { left: 8px; }
+.carousel .next { right: 8px; }
+.carousel .dots { position: absolute; bottom: 8px; left: 0; right: 0; display: flex; justify-content: center; gap: 6px; }
+.carousel .dots button { width: 7px; height: 7px; padding: 0; border-radius: 50%; border: none; background: rgba(255, 255, 255, 0.55); cursor: pointer; }
+.carousel .dots button.on { background: #fff; }
 .card h3 { margin-bottom: 4px; }
 .card .meta { color: var(--muted); font-size: 0.85rem; margin-bottom: 10px; }
 .card p { margin: 0 0 12px; font-size: 0.93rem; flex: 1; }
