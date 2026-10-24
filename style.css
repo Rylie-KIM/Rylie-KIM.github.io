@@ -136,7 +136,7 @@ footer { padding: 36px 0 56px; border-top: 1px solid var(--line); color: var(--m
 .sponsors .logo { background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 4px 8px; display: inline-flex; align-items: center; justify-content: center; }
 .sponsors .logo img { width: 68px; height: 14px; object-fit: contain; display: block; }
 
-.conf { margin: 0 0 10px; padding: 6px 10px; border-radius: 8px; font-size: 0.82rem; background: var(--accent-soft); color: var(--text); border-left: 3px solid var(--accent); flex: none !important; }
+.conf { margin: 12px 0 10px; padding: 6px 10px; border-radius: 8px; font-size: 0.82rem; background: var(--accent-soft); color: var(--text); border-left: 3px solid var(--accent); flex: none !important; }
 .job .conf { margin-top: 12px; }
 
 .card .links { display: flex; flex-direction: column; gap: 6px; margin-top: 12px; }
