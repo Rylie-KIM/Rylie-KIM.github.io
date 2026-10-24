@@ -313,3 +313,7 @@ body { background: var(--bg); }
 .sponsors .logo-text { gap: 6px; }
 .sponsors .logo-text img { width: 14px; height: 14px; border-radius: 3px; }
 .sponsors .logo-text b { font-size: 0.74rem; line-height: 14px; color: #1c1f26; font-weight: 600; white-space: nowrap; }
+
+.job-head .when { text-align: right; }
+.job-head .when .loc { display: block; margin-top: 2px; font-size: 0.85rem; }
+@media (min-width: 701px) { .job-head { margin-bottom: -22px; } .job .sub { position: relative; max-width: 70%; } }
