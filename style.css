@@ -171,3 +171,5 @@ footer { padding: 36px 0 56px; border-top: 1px solid var(--line); color: var(--m
 .majors { margin: 8px 0 0; padding-left: 20px; font-size: 0.93rem; }
 .majors li { margin-bottom: 2px; }
 #awards h2 + .sublabel { margin-top: 0; }
+
+button.btn { font-family: inherit; cursor: pointer; }
