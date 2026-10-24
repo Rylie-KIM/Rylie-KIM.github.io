@@ -8,23 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20261024b">
 </head>
 <body>
 
-<nav>
-  <div class="wrap">
-    <a class="brand" href="#top">SeoYeon Kim</a>
-    <div class="tabs" role="tablist" aria-label="Sections">
-      <button type="button" class="tab on" data-tab="all" role="tab">All</button>
-      <button type="button" class="tab" data-tab="experience" role="tab">Experience</button>
-      <button type="button" class="tab" data-tab="projects" role="tab">Projects</button>
-      <button type="button" class="tab" data-tab="research" role="tab">Research</button>
-      <button type="button" class="tab" data-tab="skills" role="tab">Skills</button>
-      <button type="button" class="tab" data-tab="education" role="tab">Education</button>
-    </div>
-  </div>
-</nav>
 
 <header class="hero" id="top">
   <div class="wrap">
@@ -36,7 +23,7 @@
       <p class="visa"><strong>Right to work in the UK, no visa sponsorship required.</strong></p>
       <div class="chips"><span>Data Science</span><span>Machine Learning</span><span>Software Engineering</span><span>MLOps</span><span>Hackathons</span></div>
       <div class="btns">
-        <a class="btn primary" href="#projects">View projects</a>
+        <a class="btn primary" href="#projects" data-go="projects">View projects</a>
         <a class="btn" href="https://github.com/Rylie-KIM">GitHub</a>
         <a class="btn" href="http://www.linkedin.com/in/seo-yeon-kim-syk">LinkedIn</a>
         <button class="btn copy-email" type="button" data-email="yeonkim112599@gmail.com" data-label="Email">Email</button>
@@ -44,6 +31,19 @@
     </div>
   </div>
 </header>
+
+<div class="tabbar">
+  <div class="wrap">
+    <div class="tabs" role="tablist" aria-label="Sections">
+      <button type="button" class="tab on" data-tab="all" role="tab">All</button>
+      <button type="button" class="tab" data-tab="experience" role="tab">Experience</button>
+      <button type="button" class="tab" data-tab="projects" role="tab">Projects</button>
+      <button type="button" class="tab" data-tab="research" role="tab">Research</button>
+      <button type="button" class="tab" data-tab="skills" role="tab">Skills</button>
+      <button type="button" class="tab" data-tab="education" role="tab">Education</button>
+    </div>
+  </div>
+</div>
 
 <main class="wrap">
 
@@ -418,11 +418,16 @@
   tabs.forEach(function (t) {
     t.addEventListener('click', function () { show(t.getAttribute('data-tab'), true); });
   });
-  var h = (location.hash || '').replace('#', '');
-  if (map[h]) show(h, false);
-  else {
-    for (var k in map) { if (map[k].indexOf(h) !== -1) { show(k, false); break; } }
+  document.querySelectorAll('[data-go]').forEach(function (el) {
+    el.addEventListener('click', function (e) { e.preventDefault(); show(el.getAttribute('data-go'), true); });
+  });
+  function fromHash(scroll) {
+    var h = (location.hash || '').replace('#', '');
+    if (map[h]) { show(h, scroll); return; }
+    for (var k in map) { if (map[k].indexOf(h) !== -1) { show(k, scroll); return; } }
   }
+  window.addEventListener('hashchange', function () { fromHash(true); });
+  fromHash(false);
 })();
 (function () {
   document.querySelectorAll('.copy-email').forEach(function (b) {

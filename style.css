@@ -208,3 +208,11 @@ main > section:first-of-type { border-top: none; }
 .icon-btn:hover { border-color: var(--accent); text-decoration: none; }
 .site-footer .legal { color: var(--muted); font-size: 0.82rem; margin: 0; }
 @media (max-width: 700px) { nav .wrap { height: auto; padding-top: 8px; padding-bottom: 8px; } nav .tabs { max-width: 100%; } .tab { padding: 7px 12px; } }
+
+/* large tab bar under the profile */
+.tabbar { position: sticky; top: 0; z-index: 10; padding: 14px 0; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.tabbar .wrap { display: flex; justify-content: center; }
+.tabbar .tabs { display: inline-flex; gap: 4px; padding: 6px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); max-width: 100%; overflow-x: auto; scrollbar-width: none; }
+.tabbar .tabs::-webkit-scrollbar { display: none; }
+.tabbar .tab { font-family: inherit; font-size: 1.05rem; padding: 12px 26px; border-radius: 11px; }
+@media (max-width: 700px) { .tabbar .tab { font-size: 0.95rem; padding: 10px 16px; } }
