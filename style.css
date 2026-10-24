@@ -167,3 +167,7 @@ footer { padding: 36px 0 56px; border-top: 1px solid var(--line); color: var(--m
 
 .sublabel { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 32px 0 14px; }
 #education h2 + .sublabel { margin-top: 0; }
+
+.majors { margin: 8px 0 0; padding-left: 20px; font-size: 0.93rem; }
+.majors li { margin-bottom: 2px; }
+#awards h2 + .sublabel { margin-top: 0; }
