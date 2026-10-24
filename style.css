@@ -300,3 +300,12 @@ body { background: var(--bg); }
 /* override .card p margins so the notice sits tight above the link buttons */
 .card p.conf { margin: 12px 0 0; flex: none; }
 .card p.conf + .links { margin-top: 6px; }
+
+/* cards: description keeps its natural height; free space sits above the bottom group
+   (tags, notice, links) so the groups line up at the bottom and no gap opens under the text */
+.card > p:not(.conf) { flex: 0 0 auto; }
+.card > div:not(.links):not(.carousel):not(.sponsors):not(.meta) { margin-top: auto; }
+.card .links { margin-top: 0; padding-top: 12px; }
+.card p.conf { margin-top: 0; }
+.card div:has(+ p.conf) { margin-bottom: 12px; }
+.card p.conf + .links { padding-top: 6px; }
