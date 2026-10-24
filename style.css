@@ -138,3 +138,10 @@ footer { padding: 36px 0 56px; border-top: 1px solid var(--line); color: var(--m
 
 .conf { margin: 0 0 10px; padding: 6px 10px; border-radius: 8px; font-size: 0.82rem; background: var(--accent-soft); color: var(--text); border-left: 3px solid var(--accent); flex: none !important; }
 .job .conf { margin-top: 12px; }
+
+.card .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.card .links a {
+  font-size: 0.8rem; font-weight: 600; padding: 4px 10px; border-radius: 6px;
+  border: 1px solid var(--line); background: var(--bg); color: var(--accent);
+}
+.card .links a:hover { border-color: var(--accent); text-decoration: none; }
