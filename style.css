@@ -313,3 +313,5 @@ body { background: var(--bg); }
 .sponsors .logo-text { gap: 6px; }
 .sponsors .logo-text img { width: 14px; height: 14px; border-radius: 3px; }
 .sponsors .logo-text b { font-size: 0.74rem; line-height: 14px; color: #1c1f26; font-weight: 600; white-space: nowrap; }
+
+.card .thumb.square { aspect-ratio: 1 / 1; object-fit: contain; background: #0f2a17; }
