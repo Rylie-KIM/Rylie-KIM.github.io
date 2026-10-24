@@ -1,0 +1,7 @@
+.DS_Store
+assets/cv/sample/
+assets/cv/*.aux
+assets/cv/*.log
+assets/cv/*.out
+assets/cv/*.tex
+assets/cv/Seoyeon-Kim_CV.pdf

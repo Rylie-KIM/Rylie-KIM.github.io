@@ -87,7 +87,7 @@ h3 { margin: 0; font-size: 1.05rem; }
 .job li { margin-bottom: 6px; font-size: 0.95rem; }
 
 /* projects */
-.grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); gap: 20px; }
 .card {
   background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
   padding: 20px; display: flex; flex-direction: column;
@@ -255,7 +255,7 @@ main > section:first-of-type { border-top: none; }
 /* ===== profile-sidebar layout ===== */
 body { background: var(--bg); }
 .banner { height: 240px; background: #0b1530 url(assets/banner.svg) center / cover no-repeat; }
-.layout { max-width: 1120px; margin: 0 auto; padding: 0 20px 56px; display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 28px; align-items: start; }
+.layout { max-width: 1480px; margin: 0 auto; padding: 0 28px 56px; display: grid; grid-template-columns: 320px minmax(0, 1fr); gap: 32px; align-items: start; }
 .profile { position: sticky; top: 16px; margin-top: -92px; display: flex; flex-direction: column; gap: 12px; z-index: 5; }
 .pcard { background: var(--bg); border: 1px solid var(--line); border-radius: 18px; padding: 0 22px 22px; box-shadow: 0 8px 28px rgba(15, 23, 42, 0.12); text-align: left; }
 .pavatar { width: 124px; height: 124px; border-radius: 50%; object-fit: cover; object-position: center 20%; margin-top: -62px; border: 5px solid var(--bg); background: var(--surface); display: block; box-shadow: 0 0 0 1px var(--line); }
