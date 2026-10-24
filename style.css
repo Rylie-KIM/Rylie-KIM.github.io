@@ -173,3 +173,5 @@ footer { padding: 36px 0 56px; border-top: 1px solid var(--line); color: var(--m
 #awards h2 + .sublabel { margin-top: 0; }
 
 button.btn { font-family: inherit; cursor: pointer; }
+
+.hero p.visa { margin: -10px 0 22px; max-width: 520px; }
