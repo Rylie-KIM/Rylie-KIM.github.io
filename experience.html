@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Experience | SeoYeon Kim</title>
+  <meta name="description" content="Portfolio of SeoYeon Kim, MSc Data Science graduate (University of Bristol).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20261024c">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="wrap">
+    <a class="brand" href="index.html">SeoYeon Kim</a>
+    <div class="links"><a href="index.html">Home</a><a href="experience.html" class="on" aria-current="page">Experience</a><a href="projects.html">Projects</a><a href="research.html">Research</a><a href="skills.html">Skills</a><a href="education.html">Education</a></div>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section id="experience">
+  <h2>Experience</h2>
+
+  <div class="job org">
+    <div class="org-logo"><img src="assets/logos/allianz.svg" alt="Allianz" loading="lazy"></div>
+    <div class="org-body">
+    <div class="job-head"><h3>Allianz UK · Data Scientist (Internship)</h3><span class="when">Jun – Oct 2026</span></div>
+    <p class="sub">Claims Operations Department, Bristol</p>
+    <p><strong>Feedback-Loop Detection and Mitigation Application.</strong> Led an individual internship project on the vehicle total loss prediction service, where the ML loop itself forced total-loss labels with no human agent involved.</p>
+    <ul>
+      <li>Built a four-layer Python framework on the Strategy design pattern with a SHAP-based loop-severity estimator, applicable to the team's production ML system.</li>
+      <li>Quantified a self-fulfilling prophecy loop across model versions with a regression discontinuity-style comparison near the decision cutoff, <strong>reducing the loop signature by 52%</strong> while precision rose from 98.52% to 98.89%.</li>
+      <li>Integrated model repositories with incompatible XGBoost versions into one <code>uv</code>-managed project, with JSON run metadata for reproducibility.</li>
+      <li>Presented to the Claims team, where its applicability to other ML systems was recognised.</li>
+    </ul>
+    <div style="margin-top:10px"><span class="tag">Python</span><span class="tag">XGBoost</span><span class="tag">SHAP</span><span class="tag">Causal inference</span><span class="tag">uv</span></div>
+  </div></div>
+
+  <div class="job org">
+    <div class="org-logo"><img src="assets/logos/180dc.png" alt="180 Degrees Consulting" loading="lazy"></div>
+    <div class="org-body">
+    <div class="job-head"><h3>180 Degrees Consulting · Data Scientist</h3><span class="when">Feb – Apr 2026</span></div>
+    <p class="sub"><a href="https://www.grapple.law/">Grapple Law</a> project, Bristol</p>
+    <ul>
+      <li>Built an n8n pipeline that segments users by an 11-level case progression hierarchy and triggers LLM-personalised retention emails through SendGrid.</li>
+      <li>Tested hypotheses with statistical tests, identifying three factors linked to settlement offers: employer acknowledgement, documents sent, and email volume.</li>
+      <li>Surfaced 31 potential nudges and implemented 3 n8n workflows; pulled data from Supabase with SQL and processed it with TypeScript.</li>
+      <li>Built an engagement dashboard with a Sankey diagram across the 11-level legal hierarchy.</li>
+    </ul>
+    <div style="margin-top:10px"><span class="tag">n8n</span><span class="tag">LLM prompting</span><span class="tag">SQL</span><span class="tag">TypeScript</span><span class="tag">Supabase</span></div>
+  </div></div>
+
+  <div class="job org">
+    <div class="org-logo"><img src="assets/logos/welt.png" alt="WELT Corporation" loading="lazy"></div>
+    <div class="org-body">
+    <div class="job-head"><h3>WELT Corporation · Software Engineer</h3><span class="when">Apr 2024 – Jul 2025</span></div>
+    <p class="sub">Series C-funded digital therapeutics company (CE-marked insomnia DTx), Seoul</p>
+    <h4 class="proj">TypeScript Backend · Digital Therapeutic (DTx) for Insomnia (Germany, Medical Device Class IIa)</h4>
+    <ul>
+      <li>Architected and deployed backend infrastructure for a German clinical trial DTx application in 3 months, launching in August 2025 with zero errors in user testing.</li>
+      <li>Implemented Command Query Responsibility Segregation and event-driven architecture in a monorepo, ensuring modularity and no circular dependencies.</li>
+    </ul>
+    <div class="ptags"><span class="tag">TypeScript</span><span class="tag">CQRS</span><span class="tag">GCP</span><span class="tag">Terraform</span><span class="tag">PostgreSQL</span><span class="tag">Prisma</span><span class="tag">Redis</span></div>
+    <h4 class="proj">TypeScript Backend · AI-Powered Healthcare Chatbot</h4>
+    <ul>
+      <li>Prototyped a LangGraph-based Slack AI chatbot with role-based access control to automate prescription code generation.</li>
+    </ul>
+    <div class="ptags"><span class="tag">TypeScript</span><span class="tag">LangGraph</span><span class="tag">Slack</span></div>
+    <h4 class="proj">Python Backend &amp; MLOps · Automated Sleep Pattern Prediction Service</h4>
+    <ul>
+      <li>Owned the development of an automated ML pipeline using Random Forest Regression (pandas, scikit-learn) to predict sleep patterns from iOS HealthKit data, demonstrating the feasibility of personalised sleep insights.</li>
+      <li>Managed an 8-week project lifecycle and presented findings to 18 stakeholders across Development, Clinical, and Product teams with an interactive Q&amp;A.</li>
+    </ul>
+    <div class="ptags"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">pandas</span><span class="tag">Cloud Run</span><span class="tag">MLOps</span></div>
+    <h4 class="proj">iOS · On-Device AI Sleep Prediction Application</h4>
+    <ul>
+      <li>Developed an on-device AI sleep prediction application using Random Forest Regression in CoreML.</li>
+      <li>Presented ML concepts to 6 clinical staff, including the Chief Medical Officer (CMO), enabling collaborative development of AI-driven feature requirements.</li>
+    </ul>
+    <div class="ptags"><span class="tag">CoreML</span><span class="tag">iOS</span><span class="tag">HealthKit</span></div>
+  </div></div>
+
+  <div class="job org">
+    <div class="org-logo"><img src="assets/logos/welt.png" alt="WELT Corporation" loading="lazy"></div>
+    <div class="org-body">
+    <div class="job-head"><h3>WELT Corporation · Software Engineer Intern</h3><span class="when">Sep 2023 – Mar 2024</span></div>
+    <p class="sub">Development Department, Seoul · full time</p>
+    <ul>
+      <li><strong>Python backend, insomnia DTx:</strong> redesigned the backend logic as a context-flow-based AI agentic system, designing and developing 34 features to improve therapeutic effectiveness and user engagement.</li>
+      <li>Presented the AI agent architecture to 30+ company-wide stakeholders, including C-suite executives.</li>
+      <li>Contributed to the Series C fundraising, securing £7.5M from Korean Development Bank, IMM Investment, Shinhan Venture Investment and Handok (Jun 2024).</li>
+      <li><strong>Quality assurance, eating-disorder DTx:</strong> led QA testing and patient data monitoring, supporting regulatory approval.</li>
+    </ul>
+    <div style="margin-top:10px"><span class="tag">Python</span><span class="tag">AI agents</span><span class="tag">QA</span></div>
+  </div></div>
+
+  <div class="job org">
+    <div class="org-logo"><img src="assets/logos/welt.png" alt="WELT Corporation" loading="lazy"></div>
+    <div class="org-body">
+    <div class="job-head"><h3>WELT Corporation · Regulatory Affairs Intern</h3><span class="when">Jun – Aug 2023</span></div>
+    <p class="sub">Clinical Department, Seoul · full time</p>
+    <ul>
+      <li>Drafted Software Architecture and Detail Design documents for a Class IIa Software as a Medical Device.</li>
+    </ul>
+    <div style="margin-top:10px"><span class="tag">Regulatory</span><span class="tag">Medical device</span></div>
+  </div></div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <img class="avatar" src="assets/profile.jpg" alt="SeoYeon Kim">
+    <h2>SeoYeon Kim</h2>
+    <p class="tagline">Data Scientist · MSc Data Science, University of Bristol | Right to work in the UK, no visa sponsorship required</p>
+    <div class="btns center">
+      <button class="btn dark copy-email" type="button" data-email="yeonkim112599@gmail.com" data-label="Email Me"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>Email Me</span></button>
+    </div>
+    <div class="icons">
+      <a class="icon-btn" href="https://github.com/Rylie-KIM" aria-label="GitHub"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.95.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.74.81 1.18 1.83 1.18 3.09 0 4.42-2.7 5.4-5.27 5.68.41.36.78 1.05.78 2.12v3.14c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg></a>
+      <a class="icon-btn" href="http://www.linkedin.com/in/seo-yeon-kim-syk" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></a>
+    </div>
+    <p class="legal">© 2026 SeoYeon Kim · London, UK<br>Company logos are trademarks of their respective owners and are shown only to identify the events.</p>
+  </div>
+</footer>
+
+<script>
+
+(function () {
+  document.querySelectorAll('.copy-email').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var t = b.getAttribute('data-email');
+      var label = b.getAttribute('data-label');
+      var span = b.querySelector('span') || b;
+      function done() { span.textContent = 'Copied: ' + t; setTimeout(function () { span.textContent = label; }, 2200); }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(t).then(done, function () { window.prompt('Copy this address:', t); });
+      } else { window.prompt('Copy this address:', t); }
+    });
+  });
+})();
+document.querySelectorAll('.carousel').forEach(function (c) {
+  var track = c.querySelector('.track');
+  var n = track.children.length;
+  if (n < 2) return;
+  var dots = document.createElement('div');
+  dots.className = 'dots';
+  var ds = [];
+  for (var i = 0; i < n; i++) {
+    var d = document.createElement('button');
+    d.type = 'button';
+    d.setAttribute('aria-label', 'Photo ' + (i + 1));
+    (function (i) { d.onclick = function () { track.scrollTo({ left: i * track.clientWidth, behavior: 'smooth' }); }; })(i);
+    dots.appendChild(d); ds.push(d);
+  }
+  function mk(cls, label, dir) {
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'nav ' + cls; b.textContent = label;
+    b.setAttribute('aria-label', dir > 0 ? 'Next photo' : 'Previous photo');
+    b.onclick = function () { track.scrollBy({ left: dir * track.clientWidth, behavior: 'smooth' }); };
+    return b;
+  }
+  c.appendChild(mk('prev', '\u2039', -1));
+  c.appendChild(mk('next', '\u203a', 1));
+  c.appendChild(dots);
+  function sync() {
+    var i = Math.round(track.scrollLeft / track.clientWidth);
+    ds.forEach(function (d, k) { d.classList.toggle('on', k === i); });
+  }
+  track.addEventListener('scroll', sync, { passive: true });
+  sync();
+});
+</script>
+</body>
+</html>

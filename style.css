@@ -216,3 +216,35 @@ main > section:first-of-type { border-top: none; }
 .tabbar .tabs::-webkit-scrollbar { display: none; }
 .tabbar .tab { font-family: inherit; font-size: 1.05rem; padding: 12px 26px; border-radius: 11px; }
 @media (max-width: 700px) { .tabbar .tab { font-size: 0.95rem; padding: 10px 16px; } }
+
+/* multi-page top navigation */
+.topnav { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.topnav .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 60px; }
+.topnav .brand { font-weight: 700; color: var(--text); white-space: nowrap; }
+.topnav .links { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+.topnav .links::-webkit-scrollbar { display: none; }
+.topnav .links a { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.78rem; font-weight: 600; color: var(--muted); padding: 10px 14px; border-radius: 10px; white-space: nowrap; }
+.topnav .links a:hover { color: var(--text); text-decoration: none; }
+.topnav .links a.on { background: var(--surface); color: var(--accent); box-shadow: inset 0 -2px 0 var(--accent); }
+@media (max-width: 700px) { .topnav .brand { display: none; } .topnav .links { width: 100%; } .topnav .wrap { padding-top: 6px; padding-bottom: 6px; } }
+
+/* big page buttons on Home */
+.tabbar.home { position: static; background: none; backdrop-filter: none; border-bottom: none; padding: 8px 0 56px; }
+.tabbar.home .tabs { flex-wrap: wrap; justify-content: center; padding: 8px; border-radius: 18px; overflow: visible; }
+.tabbar.home .tab { display: inline-block; text-decoration: none; color: var(--text); font-size: 1.1rem; padding: 14px 30px; border-radius: 12px; font-weight: 500; }
+.tabbar.home .tab:hover { background: var(--bg); color: var(--accent); }
+
+/* skills accordion cards */
+.skill-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; align-items: start; }
+.skill { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.skill summary { list-style: none; display: flex; align-items: center; gap: 16px; padding: 22px; cursor: pointer; }
+.skill summary::-webkit-details-marker { display: none; }
+.skill-icon { flex: 0 0 52px; width: 52px; height: 52px; border-radius: 50%; border: 1px solid var(--line); background: var(--bg); display: inline-flex; align-items: center; justify-content: center; color: var(--text); }
+.skill-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.skill-title { text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: var(--accent); font-size: 0.95rem; }
+.skill-desc { color: var(--muted); font-size: 0.88rem; }
+.chev { flex: 0 0 26px; width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--line); position: relative; }
+.chev::after { content: ""; position: absolute; left: 8px; top: 8px; width: 6px; height: 6px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: rotate(45deg); transition: transform 0.15s; }
+.skill[open] .chev::after { transform: rotate(-135deg); top: 11px; }
+.skill-body { padding: 0 22px 22px; }
+@media (max-width: 700px) { .skill-grid { grid-template-columns: 1fr; } }

@@ -4,14 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SeoYeon Kim | Data Scientist</title>
-  <meta name="description" content="Portfolio of SeoYeon Kim: MSc Data Science graduate (University of Bristol) with experience in insurance claims ML, digital therapeutics and hackathon-winning projects.">
+  <meta name="description" content="Portfolio of SeoYeon Kim, MSc Data Science graduate (University of Bristol).">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20261024b">
+  <link rel="stylesheet" href="style.css?v=20261024c">
 </head>
 <body>
 
+<nav class="topnav">
+  <div class="wrap">
+    <a class="brand" href="index.html">SeoYeon Kim</a>
+    <div class="links"><a href="index.html" class="on" aria-current="page">Home</a><a href="experience.html">Experience</a><a href="projects.html">Projects</a><a href="research.html">Research</a><a href="skills.html">Skills</a><a href="education.html">Education</a></div>
+  </div>
+</nav>
 
 <header class="hero" id="top">
   <div class="wrap">
@@ -21,9 +27,9 @@
       <p class="role">Data Scientist · MSc Data Science, University of Bristol</p>
       <p class="lead">I build machine learning systems that solve real-world problems, from detecting feedback loops in a production insurance model to digital therapeutics for insomnia.</p>
       <p class="visa"><strong>Right to work in the UK, no visa sponsorship required.</strong></p>
-      <div class="chips"><span>Data Science</span><span>Machine Learning</span><span>Software Engineering</span><span>MLOps</span><span>Hackathons</span></div>
+      <div class="chips"><span>Data Science</span><span>Machine Learning</span><span>Software Engineering</span><span>MLOps</span></div>
       <div class="btns">
-        <a class="btn primary" href="#projects" data-go="projects">View projects</a>
+        <a class="btn primary" href="projects.html">View projects</a>
         <a class="btn" href="https://github.com/Rylie-KIM">GitHub</a>
         <a class="btn" href="http://www.linkedin.com/in/seo-yeon-kim-syk">LinkedIn</a>
         <button class="btn copy-email" type="button" data-email="yeonkim112599@gmail.com" data-label="Email">Email</button>
@@ -32,348 +38,11 @@
   </div>
 </header>
 
-<div class="tabbar">
+<div class="tabbar home">
   <div class="wrap">
-    <div class="tabs" role="tablist" aria-label="Sections">
-      <button type="button" class="tab on" data-tab="all" role="tab">All</button>
-      <button type="button" class="tab" data-tab="experience" role="tab">Experience</button>
-      <button type="button" class="tab" data-tab="projects" role="tab">Projects</button>
-      <button type="button" class="tab" data-tab="research" role="tab">Research</button>
-      <button type="button" class="tab" data-tab="skills" role="tab">Skills</button>
-      <button type="button" class="tab" data-tab="education" role="tab">Education</button>
-    </div>
+    <div class="tabs"><a class="tab" href="experience.html">Experience</a><a class="tab" href="projects.html">Projects</a><a class="tab" href="research.html">Research</a><a class="tab" href="skills.html">Skills</a><a class="tab" href="education.html">Education</a></div>
   </div>
 </div>
-
-<main class="wrap">
-
-<section id="experience">
-  <h2>Experience</h2>
-
-  <div class="job org">
-    <div class="org-logo"><img src="assets/logos/allianz.svg" alt="Allianz" loading="lazy"></div>
-    <div class="org-body">
-    <div class="job-head"><h3>Allianz UK · Data Scientist (Internship)</h3><span class="when">Jun – Oct 2026</span></div>
-    <p class="sub">Claims Operations Department, Bristol</p>
-    <p><strong>Feedback-Loop Detection and Mitigation Application.</strong> Led an individual internship project on the vehicle total loss prediction service, where the ML loop itself forced total-loss labels with no human agent involved.</p>
-    <ul>
-      <li>Built a four-layer Python framework on the Strategy design pattern with a SHAP-based loop-severity estimator, applicable to the team's production ML system.</li>
-      <li>Quantified a self-fulfilling prophecy loop across model versions with a regression discontinuity-style comparison near the decision cutoff, <strong>reducing the loop signature by 52%</strong> while precision rose from 98.52% to 98.89%.</li>
-      <li>Integrated model repositories with incompatible XGBoost versions into one <code>uv</code>-managed project, with JSON run metadata for reproducibility.</li>
-      <li>Presented to the Claims team, where its applicability to other ML systems was recognised.</li>
-    </ul>
-    <div style="margin-top:10px"><span class="tag">Python</span><span class="tag">XGBoost</span><span class="tag">SHAP</span><span class="tag">Causal inference</span><span class="tag">uv</span></div>
-  </div></div>
-
-  <div class="job org">
-    <div class="org-logo"><img src="assets/logos/180dc.png" alt="180 Degrees Consulting" loading="lazy"></div>
-    <div class="org-body">
-    <div class="job-head"><h3>180 Degrees Consulting · Data Scientist</h3><span class="when">Feb – Apr 2026</span></div>
-    <p class="sub"><a href="https://www.grapple.law/">Grapple Law</a> project, Bristol</p>
-    <ul>
-      <li>Built an n8n pipeline that segments users by an 11-level case progression hierarchy and triggers LLM-personalised retention emails through SendGrid.</li>
-      <li>Tested hypotheses with statistical tests, identifying three factors linked to settlement offers: employer acknowledgement, documents sent, and email volume.</li>
-      <li>Surfaced 31 potential nudges and implemented 3 n8n workflows; pulled data from Supabase with SQL and processed it with TypeScript.</li>
-      <li>Built an engagement dashboard with a Sankey diagram across the 11-level legal hierarchy.</li>
-    </ul>
-    <div style="margin-top:10px"><span class="tag">n8n</span><span class="tag">LLM prompting</span><span class="tag">SQL</span><span class="tag">TypeScript</span><span class="tag">Supabase</span></div>
-  </div></div>
-
-  <div class="job org">
-    <div class="org-logo"><img src="assets/logos/welt.png" alt="WELT Corporation" loading="lazy"></div>
-    <div class="org-body">
-    <div class="job-head"><h3>WELT Corporation · Software Engineer</h3><span class="when">Apr 2024 – Jul 2025</span></div>
-    <p class="sub">Series C-funded digital therapeutics company (CE-marked insomnia DTx), Seoul</p>
-    <h4 class="proj">TypeScript Backend · Digital Therapeutic (DTx) for Insomnia (Germany, Medical Device Class IIa)</h4>
-    <ul>
-      <li>Architected and deployed backend infrastructure for a German clinical trial DTx application in 3 months, launching in August 2025 with zero errors in user testing.</li>
-      <li>Implemented Command Query Responsibility Segregation and event-driven architecture in a monorepo, ensuring modularity and no circular dependencies.</li>
-    </ul>
-    <div class="ptags"><span class="tag">TypeScript</span><span class="tag">CQRS</span><span class="tag">GCP</span><span class="tag">Terraform</span><span class="tag">PostgreSQL</span><span class="tag">Prisma</span><span class="tag">Redis</span></div>
-    <h4 class="proj">TypeScript Backend · AI-Powered Healthcare Chatbot</h4>
-    <ul>
-      <li>Prototyped a LangGraph-based Slack AI chatbot with role-based access control to automate prescription code generation.</li>
-    </ul>
-    <div class="ptags"><span class="tag">TypeScript</span><span class="tag">LangGraph</span><span class="tag">Slack</span></div>
-    <h4 class="proj">Python Backend &amp; MLOps · Automated Sleep Pattern Prediction Service</h4>
-    <ul>
-      <li>Owned the development of an automated ML pipeline using Random Forest Regression (pandas, scikit-learn) to predict sleep patterns from iOS HealthKit data, demonstrating the feasibility of personalised sleep insights.</li>
-      <li>Managed an 8-week project lifecycle and presented findings to 18 stakeholders across Development, Clinical, and Product teams with an interactive Q&amp;A.</li>
-    </ul>
-    <div class="ptags"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">pandas</span><span class="tag">Cloud Run</span><span class="tag">MLOps</span></div>
-    <h4 class="proj">iOS · On-Device AI Sleep Prediction Application</h4>
-    <ul>
-      <li>Developed an on-device AI sleep prediction application using Random Forest Regression in CoreML.</li>
-      <li>Presented ML concepts to 6 clinical staff, including the Chief Medical Officer (CMO), enabling collaborative development of AI-driven feature requirements.</li>
-    </ul>
-    <div class="ptags"><span class="tag">CoreML</span><span class="tag">iOS</span><span class="tag">HealthKit</span></div>
-  </div></div>
-
-  <div class="job org">
-    <div class="org-logo"><img src="assets/logos/welt.png" alt="WELT Corporation" loading="lazy"></div>
-    <div class="org-body">
-    <div class="job-head"><h3>WELT Corporation · Software Engineer Intern</h3><span class="when">Sep 2023 – Mar 2024</span></div>
-    <p class="sub">Development Department, Seoul · full time</p>
-    <ul>
-      <li><strong>Python backend, insomnia DTx:</strong> redesigned the backend logic as a context-flow-based AI agentic system, designing and developing 34 features to improve therapeutic effectiveness and user engagement.</li>
-      <li>Presented the AI agent architecture to 30+ company-wide stakeholders, including C-suite executives.</li>
-      <li>Contributed to the Series C fundraising, securing £7.5M from Korean Development Bank, IMM Investment, Shinhan Venture Investment and Handok (Jun 2024).</li>
-      <li><strong>Quality assurance, eating-disorder DTx:</strong> led QA testing and patient data monitoring, supporting regulatory approval.</li>
-    </ul>
-    <div style="margin-top:10px"><span class="tag">Python</span><span class="tag">AI agents</span><span class="tag">QA</span></div>
-  </div></div>
-
-  <div class="job org">
-    <div class="org-logo"><img src="assets/logos/welt.png" alt="WELT Corporation" loading="lazy"></div>
-    <div class="org-body">
-    <div class="job-head"><h3>WELT Corporation · Regulatory Affairs Intern</h3><span class="when">Jun – Aug 2023</span></div>
-    <p class="sub">Clinical Department, Seoul · full time</p>
-    <ul>
-      <li>Drafted Software Architecture and Detail Design documents for a Class IIa Software as a Medical Device.</li>
-    </ul>
-    <div style="margin-top:10px"><span class="tag">Regulatory</span><span class="tag">Medical device</span></div>
-  </div></div>
-</section>
-
-<section id="lab">
-  <h2>Laboratory Experience</h2>
-
-  <div class="job org">
-    <div class="org-logo"><img src="assets/logos/ibs.svg" alt="Institute for Basic Science" loading="lazy"></div>
-    <div class="org-body">
-    <div class="job-head"><h3><a href="https://www.ibs.re.kr/eng/sub02_06_03.do">Yonsei University IBS CNM &amp; NanoBME</a></h3><span class="when">Sep 2022 – Jun 2023</span></div>
-    <ul>
-      <li>Team Leader of Precision Medicine, NANOSEA (NanoScience &amp; Engineering Academia).</li>
-      <li>Intern of the Gene Editing Team (Mini Science Factory), May 2023.</li>
-    </ul>
-    <div style="margin-top:10px"><span class="tag">Precision medicine</span><span class="tag">Gene editing</span><span class="tag">Team leadership</span></div>
-  </div></div>
-
-  <div class="job org">
-    <div class="org-logo brand"><span class="mono">BLISS</span></div>
-    <div class="org-body">
-    <div class="job-head"><h3><a href="https://bliss.yonsei.ac.kr/?ckattempt=1">Yonsei University Bioelectronics and Electrical Engineering Laboratory (BLISS)</a></h3><span class="when">Jan – May 2023</span></div>
-    <p class="sub">Undergraduate Thesis Research Intern</p>
-    <ul>
-      <li>Conductive hydrogel development for soft bioelectronics.</li>
-    </ul>
-    <div style="margin-top:10px"><span class="tag">Bioelectronics</span><span class="tag">Hydrogel</span></div>
-  </div></div>
-
-  <div class="job org">
-    <div class="org-logo navy"><img src="assets/logos/mfel.png" alt="Medicinal Food Engineering Laboratory" loading="lazy"></div>
-    <div class="org-body">
-    <div class="job-head"><h3><a href="https://byunlab.wixsite.com/mfel/">Yonsei University Medicinal Food Engineering Laboratory</a></h3><span class="when">Mar – Jun 2022</span></div>
-    <p class="sub">Undergraduate Thesis Research Intern</p>
-    <ul>
-      <li>Literature review on computational approaches for breast cancer drug discovery: natural compounds targeting estrogen receptor-positive breast cancer using 3D pharmacophore and QSAR models.</li>
-    </ul>
-    <div style="margin-top:10px"><span class="tag">QSAR</span><span class="tag">Drug discovery</span><span class="tag">Literature review</span></div>
-  </div></div>
-</section>
-
-<section id="projects">
-  <h2>Hackathons &amp; Industry Projects</h2>
-  <div class="grid">
-
-    <article class="card">
-      <img class="thumb" src="assets/projects/allianz.jpg" alt="Allianz UK office" loading="lazy">
-      <h3>Feedback-Loop Detection Framework</h3>
-      <div class="meta">Allianz UK internship · 2026</div>
-      <p>Four-layer Python framework to detect and mitigate a self-fulfilling prophecy loop in a production total-loss model. <span class="badge">Loop signature −52%</span>, precision 98.52% → 98.89%.</p>
-      <div><span class="tag">Causal inference</span><span class="tag">SHAP</span><span class="tag">XGBoost</span></div>
-      <p class="conf"><strong>Confidential.</strong> Code, data and detailed results cannot be shared.</p>
-    </article>
-
-    <article class="card">
-      <img class="thumb" src="assets/projects/tbc.jpg" alt="TBC team at the Grok hackathon" loading="lazy" style="object-position:center 35%">
-      <h3>TBC</h3>
-      <div class="meta">Grok Bot Community Engineering Hackathon, London · Oct 2026</div>
-      <p>Built in three hours with Grok and cognee: a two-sided platform matching hackathon organisers, university societies and builder clubs with sponsors and hosts, so fewer events are left with sponsors "to be confirmed". Team of four.</p>
-      <div><span class="tag">Grok</span><span class="tag">cognee</span><span class="tag">Hackathon</span></div>
-      <div class="links"><a href="https://github.com/vickyvicky122/TBC">GitHub · Project repository</a></div>
-    </article>
-
-    <article class="card">
-      <a href="https://lnkd.in/p/ecCn3j2A"><img class="thumb" src="assets/projects/aibio.jpg" alt="London AI x Bio Hackathon participants" loading="lazy"></a>
-      <h3>Herbicide-Resistance Mutation Agent</h3>
-      <div class="meta">London AI×Bio Hackathon 2026 · <span class="badge">2nd of 15 teams</span></div>
-      <div class="sponsors"><span>Co-hosted by</span><span class="logo"><img src="assets/logos/wilbelabs.png" alt="WilbeLABS" loading="lazy"></span><span class="logo"><img src="assets/logos/nvidia.svg" alt="NVIDIA" loading="lazy"></span><span class="logo"><img src="assets/logos/openai.svg" alt="OpenAI" loading="lazy"></span></div>
-      <p>Agentic workflow using GPT-Rosalind, NVIDIA BioNeMo, DiffDock and OpenFold to identify minimal point mutations that confer herbicide resistance while preserving protein structure.</p>
-      <div><span class="tag">Agents</span><span class="tag">Protein modelling</span></div>
-      <div class="links"><a href="https://lnkd.in/p/ecCn3j2A">LinkedIn post</a><a href="https://github.com/olivervjd/agentic-enzyme-engineering-uncoupling-inhibitors">GitHub · Agentic workflow</a></div>
-    </article>
-
-    <article class="card">
-      <img class="thumb" src="assets/projects/barnardos.jpg" alt="Allianz x Barnardo's Data Science for Social Good hackathon participants" loading="lazy" style="object-position:70% center">
-      <h3>Donor Retention Clustering</h3>
-      <div class="meta">Allianz UK × Barnardo's Hackathon 2026 · <span class="badge">1 of 2 winning teams</span></div>
-      <div class="sponsors"><span>Hosted by</span><span class="logo"><img src="assets/logos/allianz.svg" alt="Allianz" loading="lazy"></span><span class="logo"><img src="assets/logos/barnardos.svg" alt="Barnardo's" loading="lazy"></span></div>
-      <p>Clustered donors with K-Means on engineered activity features, recommended retention actions and presented the expected donation increase as the monetary impact.</p>
-      <div><span class="tag">K-Means</span><span class="tag">Feature engineering</span></div>
-      <div class="links"><a href="https://lnkd.in/p/eSmuMDUE">LinkedIn post</a></div>
-    </article>
-
-    <article class="card">
-      <a href="https://lnkd.in/p/ewrXJS7N"><img class="thumb" src="assets/projects/adlens.jpg" alt="Wise x HuddleHive hackathon team" loading="lazy"></a>
-      <h3>AdLens</h3>
-      <div class="meta">Wise × HuddleHive Women in Tech Hackathon 2026</div>
-      <div class="sponsors"><span>Hosted by</span><span class="logo"><img src="assets/logos/wise.svg" alt="Wise" loading="lazy"></span><span class="logo"><img src="assets/logos/huddlehive.png" alt="HuddleHive" loading="lazy"></span></div>
-      <p>Undisclosed-advertisement detector for Instagram posts to increase transparency for customers. Fine-tuned DistilBERT on 1.6M posts (disclosure hashtags masked), with Gemini-generated explanations in a FastAPI / Next.js app.</p>
-      <div><span class="tag">NLP</span><span class="tag">DistilBERT</span><span class="tag">FastAPI</span><span class="tag">Next.js</span></div>
-      <div class="links"><a href="https://lnkd.in/p/ewrXJS7N">LinkedIn post</a><a href="https://lnkd.in/e_X7Y5Zg">GitHub · ML &amp; detection engine</a><a href="https://lnkd.in/e6mPdQmp">GitHub · Web app</a></div>
-    </article>
-
-    <article class="card">
-      <div class="carousel"><div class="track"><img class="thumb" src="assets/projects/grapple.jpg" alt="180 Degrees Consulting Grapple Law team" loading="lazy"><img class="thumb" src="assets/projects/grapple_profile.jpg" alt="Grapple Law project team profile" loading="lazy"></div></div>
-      <h3>Grapple Retention Pipeline &amp; Dashboard</h3>
-      <div class="meta">180 Degrees Consulting · 2026</div>
-      <div class="sponsors"><span>Project by</span><span class="logo"><img src="assets/logos/180dc-full.png" alt="180 Degrees Consulting" loading="lazy"></span><span class="logo"><img src="assets/logos/grapple.svg" alt="Grapple Law" loading="lazy"></span></div>
-      <p>n8n workflows with LLM prompt engineering to nudge legal-platform users toward a subscription, plus a Sankey engagement dashboard across an 11-level case hierarchy.</p>
-      <div><span class="tag">n8n</span><span class="tag">SendGrid</span><span class="tag">SQL</span></div>
-      <p class="conf"><strong>Confidential.</strong> The n8n pipeline cannot be shared.</p>
-      <div class="links"><a href="https://github.com/michaelsamuel2005/GrappleDashboard">GitHub · Dashboard</a></div>
-    </article>
-
-    <article class="card">
-      <div class="carousel"><div class="track"><a href="https://www.linkedin.com/posts/seo-yeon-kim-syk_headstart-launchpad2026-healthtech-ugcPost-7443459306458427392-GZk8"><img class="thumb" style="object-fit:contain;background:#000" src="assets/projects/lumenia.jpg" alt="Lumenia logo" loading="lazy"></a><a href="https://www.linkedin.com/posts/seo-yeon-kim-syk_headstart-launchpad2026-healthtech-ugcPost-7443459306458427392-GZk8"><img class="thumb" src="assets/projects/lumenia_cert.jpg" alt="Headstart Launchpad certificate of completion" loading="lazy"></a></div></div>
-      <h3>Lumenia</h3>
-      <div class="meta">Headstart Global Launchpad EMEA 2026</div>
-      <p>Led the team in the Healthcare Tech case competition, delivering a fully evidenced B2B mental health platform pitch within six days.</p>
-      <div><span class="tag">Leadership</span><span class="tag">Healthcare</span></div>
-      <div class="links"><a href="https://www.linkedin.com/posts/seo-yeon-kim-syk_headstart-launchpad2026-healthtech-ugcPost-7443459306458427392-GZk8">LinkedIn post</a><a href="https://github.com/Rylie-KIM/uob-msc-bdss-hsg-launchpad-2026">GitHub · Project repository</a></div>
-    </article>
-
-    <article class="card">
-      <div class="carousel"><div class="track"><a href="https://lnkd.in/p/eapujvNC"><img class="thumb" src="assets/projects/lloyds_team.jpg" alt="Lloyds x UoB Datathon team" loading="lazy"></a><a href="https://lnkd.in/p/eapujvNC"><img class="thumb" src="assets/projects/lloyds.jpg" alt="Team slide: Credit Card Fraud Detection" loading="lazy"></a></div></div>
-      <h3>Fraud Detection: Performance vs Carbon</h3>
-      <div class="meta">Lloyds × UoB Datathon 2026</div>
-      <div class="sponsors"><span>Hosted by</span><span class="logo"><img src="assets/logos/lloyds.svg" alt="Lloyds Bank" loading="lazy"></span><span class="logo"><img src="assets/logos/bristol.svg" alt="University of Bristol" loading="lazy"></span></div>
-      <p>Benchmarked 11 ML models for fraud detection and designed a leaderboard that weighs predictive performance against carbon cost.</p>
-      <div><span class="tag">scikit-learn</span><span class="tag">Benchmarking</span></div>
-      <div class="links"><a href="https://lnkd.in/p/eapujvNC">LinkedIn post</a></div>
-    </article>
-
-  </div>
-  <p style="margin-top:20px">More code on <a href="https://github.com/Rylie-KIM">GitHub</a>.</p>
-</section>
-
-<section id="research">
-  <h2>Research</h2>
-  <p style="margin-top:-12px;color:var(--muted)">Final projects from the MSc Data Science at the University of Bristol, and graduation research at Yonsei University.</p>
-  <div class="grid">
-
-    <article class="card">
-      <div class="carousel"><div class="track"><img class="thumb" src="assets/coursework/lsde_p1.jpg" alt="Serverless AWS architecture diagram" loading="lazy"><img class="thumb" src="assets/coursework/lsde_p9.jpg" alt="Auto scaling warm-up time test results" loading="lazy"></div></div>
-      <h3>Serverless AI Image Processing on AWS</h3>
-      <div class="meta">MSc coursework · Large-Scale Data Engineering</div>
-      <p>Serverless architecture on Lambda, SageMaker and API Gateway with SQS and EC2 auto-scaling; load testing <span class="badge">cut processing time for 120 files by 76%</span>.</p>
-      <div><span class="tag">AWS</span><span class="tag">Serverless</span><span class="tag">Auto-scaling</span></div>
-      <div class="links"><a href="assets/reports/SeoYeon-Kim_Serverless-AWS-Image-Processing.pdf">Report (PDF)</a></div>
-    </article>
-
-    <article class="card">
-      <div class="carousel"><div class="track"><img class="thumb" src="assets/coursework/dsmp_p1.jpg" alt="Report first page" loading="lazy"><img class="thumb" src="assets/coursework/dsmp_p4.jpg" alt="Horizon-stratified calibration algorithm and metrics" loading="lazy"></div></div>
-      <h3>Calibration of Deep Probabilistic Forecasts</h3>
-      <div class="meta">MSc coursework · Time series</div>
-      <p>Investigated calibration degradation in DeepAR and Temporal Fusion Transformer, and a post-hoc conformal correction via EnbPI.</p>
-      <div><span class="tag">Forecasting</span><span class="tag">Conformal prediction</span></div>
-      <div class="links"><a href="assets/reports/SeoYeon-Kim_DSMP_Calibration-DeepAR-TFT.pdf">Report (PDF)</a><a href="https://github.com/Rylie-KIM/uob-ds-dsmp-research-portfolio-2026">GitHub · Research portfolio</a></div>
-    </article>
-
-    <article class="card">
-      <div class="carousel"><div class="track"><img class="thumb" src="assets/coursework/iat_p1.jpg" alt="Report first page" loading="lazy"><img class="thumb" src="assets/coursework/iat_p8.jpg" alt="t-SNE embeddings and retrieval results table" loading="lazy"></div></div>
-      <h3>Image-to-Sentence Retrieval</h3>
-      <div class="meta">MSc coursework · Team lead</div>
-      <p>Multi-dataset comparative study of image-to-sentence retrieval via CNN embedding regression, with custom evaluation metric design; led the team using Jira and GitHub code review.</p>
-      <div><span class="tag">Computer vision</span><span class="tag">CNN</span></div>
-      <div class="links"><a href="assets/reports/SeoYeon-Kim_Image-to-Sentence-Retrieval.pdf">Report (PDF)</a><a href="https://github.com/Rylie-KIM/uob-ds-intro-to-ai-final-cw-2026">GitHub · Coursework repository</a></div>
-    </article>
-
-    <article class="card">
-      <div class="carousel"><div class="track"><img class="thumb" src="assets/coursework/visa_p1.jpg" alt="Report cover" loading="lazy"></div></div>
-      <h3>Migrant Integration Decision-Support Dashboard</h3>
-      <div class="meta">MSc coursework · Visual Analytics</div>
-      <p>Tableau dashboard for local authority integration officers on housing insecurity and economic integration of migrants (UK 2021), using Bayesian forecasting, PCA, K-Means and UMAP, with user testing.</p>
-      <div><span class="tag">Tableau</span><span class="tag">UMAP</span><span class="tag">Bayesian</span></div>
-      <div class="links"><a href="assets/reports/SeoYeon-Kim_Migrant-Integration-Dashboard.pdf">Report (PDF)</a></div>
-    </article>
-
-    <article class="card">
-      <div class="carousel"><div class="track"><img class="thumb" src="assets/coursework/ee_circuit.jpg" alt="Stretchable circuit with LEDs on the hydrogel-based adhesive" loading="lazy"><img class="thumb" src="assets/coursework/ee_sensor.jpg" alt="Hydrogel-based strain sensor test setup" loading="lazy"></div></div>
-      <h3>Research and Development of Electrical Bio-adhesive Materials</h3>
-      <div class="meta">Yonsei graduation research (EEE4610) · Jun 2023 · team of two</div>
-      <div class="sponsors"><span>Institution</span><span class="logo"><img src="assets/logos/yonsei.svg" alt="Yonsei University" loading="lazy"></span></div>
-      <p>Developed a hydrogel-based adhesive from tannic acid (TA) and polyvinyl alcohol (PVA) for soft bioelectronics. <span class="badge">Bonding strength up to 4.109 MPa</span> on stainless steel and 637.6 kPa on porous polyimide; demonstrated a stretchable circuit and a strain sensor.</p>
-      <div><span class="tag">Hydrogel</span><span class="tag">Soft bioelectronics</span><span class="tag">PVA / tannic acid</span></div>
-      <div class="links"><a href="assets/reports/SeoYeon-Kim_Electrical-Bio-adhesive-Materials.pdf">Report (PDF)</a></div>
-    </article>
-
-    <article class="card">
-      <img class="thumb" src="assets/coursework/bio_fig.jpg" alt="E2-ER-alpha signalling pathway figure from the thesis" loading="lazy">
-      <h3>Identification of Bioactive Structures of Natural Compounds for ER-Positive Breast Cancer Treatment</h3>
-      <div class="meta">Yonsei Bio-Convergence graduation thesis · Jun 2022</div>
-      <div class="sponsors"><span>Institution</span><span class="logo"><img src="assets/logos/yonsei.svg" alt="Yonsei University" loading="lazy"></span></div>
-      <p><strong>Drug discovery</strong> on natural compounds: literature-based study using <strong>3D pharmacophore and 3D QSAR models</strong> to identify structures of natural compounds that can treat ER-positive breast cancer, aiming at bioactive compounds in mugwort for polycystic ovary syndrome (PCOS). Also designed the in vitro and in vivo validation experiments.</p>
-      <div><span class="tag">3D QSAR</span><span class="tag">Pharmacophore</span><span class="tag">Drug discovery</span></div>
-      <div class="links"><a href="assets/reports/SeoYeon-Kim_Bioactive-Structures-ER-Positive-Breast-Cancer.pdf">Report (PDF)</a></div>
-    </article>
-
-  </div>
-</section>
-
-<section id="skills">
-  <h2>Skills</h2>
-  <dl class="skills">
-    <dt>Programming &amp; Query Languages</dt><dd>Python, SQL, TypeScript</dd>
-    <dt>Machine Learning &amp; Analytics</dt><dd>scikit-learn, pandas, XGBoost, SHAP, CoreML, LangGraph, DistilBERT, Random Forest Regression, K-Means, PCA, UMAP, Bayesian Ridge, hypothesis testing</dd>
-    <dt>Cloud &amp; MLOps</dt><dd>AWS (Lambda, SageMaker, S3, API Gateway, SQS, EC2 Auto Scaling, DynamoDB), GCP (Cloud Run), Terraform, Terragrunt, Docker, GitHub CI/CD, uv</dd>
-    <dt>Data &amp; Backend</dt><dd>PostgreSQL, Supabase, Redis, Prisma, FastAPI, Next.js, n8n, SendGrid</dd>
-    <dt>Visualisation &amp; Collaboration</dt><dd>Tableau, Jira, GitHub</dd>
-  </dl>
-</section>
-
-<section id="education">
-  <h2>Education</h2>
-  <div class="edu org">
-    <div class="org-logo"><img src="assets/logos/bristol.svg" alt="University of Bristol" loading="lazy"></div>
-    <div class="org-body">
-    <h3>University of Bristol · MSc Data Science</h3>
-    <div class="when">Sep 2025 – Oct 2026 · Average mark 76% (Distinction)</div>
-    <p>Statistical Computing and Empirical Methods, Large-Scale Data Engineering, Introduction to AI and Text Analytics, Visual Analytics, Data Science Methods and Practice.</p>
-  </div></div>
-  <div class="edu org">
-    <div class="org-logo"><img src="assets/logos/yonsei.svg" alt="Yonsei University" loading="lazy"></div>
-    <div class="org-body">
-    <h3>Yonsei University · BSc in Engineering</h3>
-    <div class="when">Mar 2018 – Aug 2024 · Double major</div>
-    <ul class="majors">
-      <li><strong>Major 1</strong> · Bio-Convergence and Engineering</li>
-      <li><strong>Major 2</strong> · Electrical and Electronic Engineering</li>
-    </ul>
-  </div></div>
-</section>
-
-<section id="awards">
-  <h2>Awards &amp; Certification</h2>
-  <h3 class="sublabel">Awards</h3>
-  <div class="edu org">
-    <div class="org-logo"><img src="assets/logos/bristol.svg" alt="University of Bristol" loading="lazy"></div>
-    <div class="org-body">
-    <h3><a href="https://badges.bristol.ac.uk/e3a6c591-be1d-4785-b332-3b8a6daa4193#acc.ay9OCRIe">PLUS Award</a> · University of Bristol</h3>
-    <div class="when">Mar 2026</div>
-    <p>Awarded for 70+ hours of extra work experience, employability workshops and mock interviews, with a reflective report.</p>
-  </div></div>
-  <h3 class="sublabel">Certification</h3>
-  <div class="edu org">
-    <div class="org-logo"><img src="assets/logos/kdata.svg" alt="Korea Data Agency" loading="lazy"></div>
-    <div class="org-body">
-    <h3>Certificate of Advanced Data Analytics Professional · Korea Data Agency</h3>
-    <div class="when">Nov 2023</div>
-  </div></div>
-</section>
-
-</main>
 
 <footer class="site-footer">
   <div class="wrap">
@@ -393,42 +62,10 @@
 
 <script>
 (function () {
-  var map = {
-    experience: ['experience'],
-    projects: ['projects'],
-    research: ['lab', 'research'],
-    skills: ['skills'],
-    education: ['education', 'awards']
-  };
-  var tabs = document.querySelectorAll('.tab');
-  var all = ['experience', 'lab', 'projects', 'research', 'skills', 'education', 'awards'];
-  function show(name, scroll) {
-    var ids = name === 'all' ? all : (map[name] || all);
-    all.forEach(function (id) {
-      var el = document.getElementById(id);
-      if (el) el.hidden = ids.indexOf(id) === -1;
-    });
-    tabs.forEach(function (t) { t.classList.toggle('on', t.getAttribute('data-tab') === name); });
-    try { history.replaceState(null, '', name === 'all' ? location.pathname : '#' + name); } catch (e) {}
-    if (scroll) {
-      var top = document.querySelector('.hero').offsetHeight;
-      window.scrollTo({ top: top > window.scrollY ? top - 20 : window.scrollY, behavior: 'smooth' });
-    }
-  }
-  tabs.forEach(function (t) {
-    t.addEventListener('click', function () { show(t.getAttribute('data-tab'), true); });
-  });
-  document.querySelectorAll('[data-go]').forEach(function (el) {
-    el.addEventListener('click', function (e) { e.preventDefault(); show(el.getAttribute('data-go'), true); });
-  });
-  function fromHash(scroll) {
-    var h = (location.hash || '').replace('#', '');
-    if (map[h]) { show(h, scroll); return; }
-    for (var k in map) { if (map[k].indexOf(h) !== -1) { show(k, scroll); return; } }
-  }
-  window.addEventListener('hashchange', function () { fromHash(true); });
-  fromHash(false);
+  var h = (location.hash || '').replace('#', '');
+  if (['experience','projects','research','skills','education'].indexOf(h) !== -1) location.replace(h + '.html');
 })();
+
 (function () {
   document.querySelectorAll('.copy-email').forEach(function (b) {
     b.addEventListener('click', function () {
