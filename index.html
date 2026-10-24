@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SeoYeon Kim | Data Scientist</title>
+  <meta name="description" content="Portfolio of SeoYeon Kim: MSc Data Science graduate (University of Bristol) with experience in insurance claims ML, digital therapeutics and hackathon-winning projects.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">SeoYeon Kim</a>
+    <ul>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <img src="assets/profile.jpg" alt="Portrait of SeoYeon Kim">
+    <div>
+      <h1>SeoYeon Kim</h1>
+      <p class="role">Data Scientist · MSc Data Science, University of Bristol</p>
+      <p class="lead">I build machine learning systems that solve real-world problems, from detecting feedback loops in a production insurance model to digital therapeutics for insomnia. Right to work in the UK, no visa sponsorship required.</p>
+      <div class="btns">
+        <a class="btn primary" href="#projects">View projects</a>
+        <a class="btn" href="https://github.com/Rylie-KIM">GitHub</a>
+        <a class="btn" href="http://www.linkedin.com/in/seo-yeon-kim-syk">LinkedIn</a>
+        <a class="btn" href="mailto:yeonkim112599@gmail.com">Email</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section id="experience">
+  <h2>Experience</h2>
+
+  <div class="job">
+    <div class="job-head"><h3>Allianz UK · Data Scientist (Internship)</h3><span class="when">Jun – Oct 2026</span></div>
+    <p class="sub">Claims Operations Department, Bristol</p>
+    <p><strong>Feedback-Loop Detection and Mitigation Application.</strong> Led an individual dissertation project on the vehicle total loss prediction service, where the ML loop itself forced total-loss labels with no human agent involved.</p>
+    <ul>
+      <li>Built a four-layer Python framework on the Strategy design pattern with a SHAP-based loop-severity estimator, applicable to the team's production ML system.</li>
+      <li>Quantified a self-fulfilling prophecy loop across model versions with a regression discontinuity-style comparison near the decision cutoff, <strong>reducing the loop signature by 52%</strong> while precision rose from 98.52% to 98.89%.</li>
+      <li>Integrated model repositories with incompatible XGBoost versions into one <code>uv</code>-managed project, with JSON run metadata for reproducibility.</li>
+      <li>Presented to the Claims team, where its applicability to other ML systems was recognised.</li>
+    </ul>
+    <div style="margin-top:10px"><span class="tag">Python</span><span class="tag">XGBoost</span><span class="tag">SHAP</span><span class="tag">Causal inference</span><span class="tag">uv</span></div>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><h3>180 Degrees Consulting · Data Scientist</h3><span class="when">Feb – Apr 2026</span></div>
+    <p class="sub"><a href="https://www.grapple.law/">Grapple Law</a> project, Bristol</p>
+    <ul>
+      <li>Built an n8n pipeline that segments users by an 11-level case progression hierarchy and triggers LLM-personalised retention emails through SendGrid.</li>
+      <li>Tested hypotheses with statistical tests, identifying three factors linked to settlement offers: employer acknowledgement, documents sent, and email volume.</li>
+      <li>Surfaced 31 potential nudges and implemented 3 n8n workflows; pulled data from Supabase with SQL and processed it with TypeScript.</li>
+      <li>Built an engagement dashboard with a Sankey diagram across the 11-level legal hierarchy.</li>
+    </ul>
+    <div style="margin-top:10px"><span class="tag">n8n</span><span class="tag">LLM prompting</span><span class="tag">SQL</span><span class="tag">TypeScript</span><span class="tag">Supabase</span></div>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><h3>WELT Corporation · Software Engineer</h3><span class="when">Apr 2024 – Jul 2025</span></div>
+    <p class="sub">Series C-funded digital therapeutics company (CE-marked insomnia DTx), Seoul · previously Software Engineer Intern (Sep 2023 – Mar 2024) and Regulatory Affairs Intern (Jun – Aug 2023)</p>
+    <ul>
+      <li>Architected and deployed the backend of a German clinical trial DTx app (Medical Device Class IIa) in 3 months, launching in August 2025 with zero errors in user testing; CQRS and event-driven design on GCP with Terraform, Docker and CI/CD.</li>
+      <li>Owned an automated ML pipeline (Random Forest Regression) predicting sleep patterns from iOS HealthKit data, with retraining on Cloud Run; presented to 18 stakeholders.</li>
+      <li>Developed an on-device AI sleep prediction app in CoreML; presented ML concepts to 6 clinical staff including the CMO.</li>
+      <li>Prototyped a LangGraph-based Slack chatbot with role-based access control for prescription code generation.</li>
+      <li>As an intern, redesigned the DTx backend logic as a context-flow-based AI agentic system with 34 features, presented to 30+ stakeholders.</li>
+    </ul>
+    <div style="margin-top:10px"><span class="tag">TypeScript</span><span class="tag">Python</span><span class="tag">GCP</span><span class="tag">Terraform</span><span class="tag">PostgreSQL</span><span class="tag">CoreML</span><span class="tag">LangGraph</span></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+
+    <article class="card">
+      <h3>Feedback-Loop Detection Framework</h3>
+      <div class="meta">Allianz UK dissertation · 2026</div>
+      <p>Four-layer Python framework to detect and mitigate a self-fulfilling prophecy loop in a production total-loss model. <span class="badge">Loop signature −52%</span>, precision 98.52% → 98.89%.</p>
+      <div><span class="tag">Causal inference</span><span class="tag">SHAP</span><span class="tag">XGBoost</span></div>
+    </article>
+
+    <article class="card">
+      <h3>AdLens</h3>
+      <div class="meta">Wise × HuddleHive Women in Tech Hackathon 2026</div>
+      <p>Undisclosed-advertisement detector for Instagram posts to increase transparency for customers. Fine-tuned DistilBERT on 1.6M posts (disclosure hashtags masked), with Gemini-generated explanations in a FastAPI / Next.js app.</p>
+      <div><span class="tag">NLP</span><span class="tag">DistilBERT</span><span class="tag">FastAPI</span><span class="tag">Next.js</span></div>
+      <p style="margin:10px 0 0"><a href="https://lnkd.in/p/ewrXJS7N">Read more →</a></p>
+    </article>
+
+    <article class="card">
+      <h3>Herbicide-Resistance Mutation Agent</h3>
+      <div class="meta">London AI×Bio Hackathon 2026 · <span class="badge">2nd of 15 teams</span></div>
+      <p>Agentic workflow using GPT-Rosalind, NVIDIA BioNeMo, DiffDock and OpenFold to identify minimal point mutations that confer herbicide resistance while preserving protein structure.</p>
+      <div><span class="tag">Agents</span><span class="tag">Protein modelling</span></div>
+      <p style="margin:10px 0 0"><a href="https://lnkd.in/p/ecCn3j2A">Read more →</a></p>
+    </article>
+
+    <article class="card">
+      <h3>Donor Retention Clustering</h3>
+      <div class="meta">Allianz UK × Barnardo's Hackathon 2026 · <span class="badge">1 of 2 winning teams</span></div>
+      <p>Clustered donors with K-Means on engineered activity features, recommended retention actions and presented the expected donation increase as the monetary impact.</p>
+      <div><span class="tag">K-Means</span><span class="tag">Feature engineering</span></div>
+      <p style="margin:10px 0 0"><a href="https://lnkd.in/p/eSmuMDUE">Read more →</a></p>
+    </article>
+
+    <article class="card">
+      <h3>Fraud Detection: Performance vs Carbon</h3>
+      <div class="meta">Lloyds × UoB Datathon 2026</div>
+      <p>Benchmarked 11 ML models for fraud detection and designed a leaderboard that weighs predictive performance against carbon cost.</p>
+      <div><span class="tag">scikit-learn</span><span class="tag">Benchmarking</span></div>
+      <p style="margin:10px 0 0"><a href="https://lnkd.in/p/eapujvNC">Read more →</a></p>
+    </article>
+
+    <article class="card">
+      <h3>Grapple Retention Pipeline &amp; Dashboard</h3>
+      <div class="meta">180 Degrees Consulting · 2026</div>
+      <p>n8n workflows with LLM prompt engineering to nudge legal-platform users toward a subscription, plus a Sankey engagement dashboard across an 11-level case hierarchy.</p>
+      <div><span class="tag">n8n</span><span class="tag">SendGrid</span><span class="tag">SQL</span></div>
+    </article>
+
+    <article class="card">
+      <h3>Serverless AI Image Processing on AWS</h3>
+      <div class="meta">MSc coursework · Large-Scale Data Engineering</div>
+      <p>Serverless architecture on Lambda, SageMaker and API Gateway with SQS and EC2 auto-scaling; load testing <span class="badge">cut processing time for 120 files by 76%</span>.</p>
+      <div><span class="tag">AWS</span><span class="tag">Serverless</span><span class="tag">Auto-scaling</span></div>
+    </article>
+
+    <article class="card">
+      <h3>Calibration of Deep Probabilistic Forecasts</h3>
+      <div class="meta">MSc coursework · Time series</div>
+      <p>Investigated calibration degradation in DeepAR and Temporal Fusion Transformer, and a post-hoc conformal correction via EnbPI.</p>
+      <div><span class="tag">Forecasting</span><span class="tag">Conformal prediction</span></div>
+    </article>
+
+    <article class="card">
+      <h3>Image-to-Sentence Retrieval</h3>
+      <div class="meta">MSc coursework · Team lead</div>
+      <p>Multi-dataset comparative study of image-to-sentence retrieval via CNN embedding regression, with custom evaluation metric design; led the team using Jira and GitHub code review.</p>
+      <div><span class="tag">Computer vision</span><span class="tag">CNN</span></div>
+    </article>
+
+    <article class="card">
+      <h3>Migrant Integration Decision-Support Dashboard</h3>
+      <div class="meta">MSc coursework · Visual Analytics</div>
+      <p>Tableau dashboard for local authority integration officers on housing insecurity and economic integration of migrants (UK 2021), using Bayesian forecasting, PCA, K-Means and UMAP, with user testing.</p>
+      <div><span class="tag">Tableau</span><span class="tag">UMAP</span><span class="tag">Bayesian</span></div>
+    </article>
+
+    <article class="card">
+      <h3>Lumenia</h3>
+      <div class="meta">Headstart Global Launchpad EMEA 2026</div>
+      <p>Led the team in the Healthcare Tech case competition, delivering a fully evidenced B2B mental health platform pitch within six days.</p>
+      <div><span class="tag">Leadership</span><span class="tag">Healthcare</span></div>
+      <p style="margin:10px 0 0"><a href="https://www.linkedin.com/posts/seo-yeon-kim-syk_headstart-launchpad2026-healthtech-ugcPost-7443459306458427392-GZk8">Read more →</a></p>
+    </article>
+
+  </div>
+  <p style="margin-top:20px">More code on <a href="https://github.com/Rylie-KIM">GitHub</a>.</p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>Programming &amp; Query Languages</dt><dd>Python, SQL, TypeScript</dd>
+    <dt>Machine Learning &amp; Analytics</dt><dd>scikit-learn, pandas, XGBoost, SHAP, CoreML, LangGraph, DistilBERT, Random Forest Regression, K-Means, PCA, UMAP, Bayesian Ridge, hypothesis testing</dd>
+    <dt>Cloud &amp; MLOps</dt><dd>AWS (Lambda, SageMaker, S3, API Gateway, SQS, EC2 Auto Scaling, DynamoDB), GCP (Cloud Run), Terraform, Terragrunt, Docker, GitHub CI/CD, uv</dd>
+    <dt>Data &amp; Backend</dt><dd>PostgreSQL, Supabase, Redis, Prisma, FastAPI, Next.js, n8n, SendGrid</dd>
+    <dt>Visualisation &amp; Collaboration</dt><dd>Tableau, Jira, GitHub</dd>
+  </dl>
+</section>
+
+<section id="education">
+  <h2>Education &amp; Awards</h2>
+  <div class="edu">
+    <h3>University of Bristol · MSc Data Science</h3>
+    <div class="when">Sep 2025 – Oct 2026 · Average mark 76% (Distinction)</div>
+    <p>Statistical Computing and Empirical Methods, Large-Scale Data Engineering, Introduction to AI and Text Analytics, Visual Analytics, Data Science Methods and Practice.</p>
+  </div>
+  <div class="edu">
+    <h3>Yonsei University · BSc in Engineering</h3>
+    <div class="when">Mar 2018 – Aug 2024 · Double majors: Bio-Convergence and Engineering, Electrical and Electronic Engineering</div>
+  </div>
+  <div class="edu">
+    <h3>Awards &amp; certification</h3>
+    <p>PLUS Award, University of Bristol (Mar 2026) · Certificate of Advanced Data Analytics Professional, Korea Data Agency (Nov 2023)</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Open to Data Scientist and ML roles in the UK. The best way to reach me is email.</p>
+  <div class="btns">
+    <a class="btn primary" href="mailto:yeonkim112599@gmail.com">yeonkim112599@gmail.com</a>
+    <a class="btn" href="http://www.linkedin.com/in/seo-yeon-kim-syk">LinkedIn</a>
+    <a class="btn" href="https://github.com/Rylie-KIM">GitHub</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">© 2026 SeoYeon Kim · London, UK</div>
+</footer>
+
+</body>
+</html>
