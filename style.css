@@ -361,3 +361,7 @@ body { background: var(--bg); }
   .card, .card .links a, .btn { transition: transform .15s ease, box-shadow .15s ease; }
   .card:hover { transform: translateY(-3px); }
 }
+
+/* equal-width tab buttons */
+.subtabs { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; }
+.subtabs a { flex: none; justify-content: center; }
